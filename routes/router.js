@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const upload = require("./upload");
+const find = require("./find");
 
 //sending the user to homepage
 router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.post("/upload", upload);
-router.get("/upload", (req, res) => {
-  res.render("upload");
+router.post("/find", find);
+router.get("/find", (req, res) => {
+  res.render("find");
 });
 
 //exorting the routes
