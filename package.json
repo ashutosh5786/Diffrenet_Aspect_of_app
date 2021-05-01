@@ -1,0 +1,17 @@
+{
+  "name": "feature_of_app",
+  "version": "1.0.0",
+  "description": "It Contains the different features code that are required for an App",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Ashutosh Singh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "nodemon": "^2.0.7"
+  }
+}
