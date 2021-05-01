@@ -11,6 +11,15 @@ app.use(
   })
 );
 
+try {
+  mongoose.connect(
+    process.env.DB,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    () => console.log("Connect")
+  );
+} catch (error) {
+  console.error(error);
+}
 app.use(bodyParser.json());
 
 //setting the view to ejs
