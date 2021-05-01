@@ -12,6 +12,12 @@ const userSchema = new mongoose.Schema({
     max: 255,
     min: 6,
   },
+  description: {
+    type: String,
+    required: false,
+    max: 255,
+    min: 0,
+  },
   date: {
     type: Date,
     default: Date.now,

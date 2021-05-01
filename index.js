@@ -11,6 +11,8 @@ app.use(
   })
 );
 
+app.use(express.json());
+
 try {
   mongoose.connect(
     process.env.DB,
@@ -20,10 +22,8 @@ try {
 } catch (error) {
   console.error(error);
 }
-app.use(bodyParser.json());
 
 //setting the view to ejs
-app.set("view engine", "ejs");
 
 //routing the users
 app.use("/", routes);

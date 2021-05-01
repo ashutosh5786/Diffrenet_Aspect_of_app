@@ -1,16 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const find = require("./find");
+const add = require("./addUser");
+const del = require("./delUser");
 
-//sending the user to homepage
-router.get("/", (req, res) => {
-  res.render("index");
-});
-
+//Searching the User API
 router.post("/find", find);
-router.get("/find", (req, res) => {
-  res.render("find");
-});
+
+//Adding User API
+router.post("/addUser", add);
+
+//Delete User-DAta
+router.post("/delUser", del);
 
 //exorting the routes
 module.exports = router;
