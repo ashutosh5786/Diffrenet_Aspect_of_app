@@ -14,7 +14,7 @@ router.post("/addUser", async (req, res) => {
   });
   try {
     const savedUser = await user.save();
-    res.sendStatus(200);
+    res.render("added", { data: savedUser });
   } catch (err) {
     res.status(400);
     console.log(err);
