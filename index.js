@@ -24,7 +24,7 @@ try {
 }
 
 //setting the view to ejs
-
+app.set("view engine", "ejs");
 //routing the users
 app.use("/", routes);
 
