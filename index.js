@@ -15,7 +15,7 @@ app.use(express.json());
 
 try {
   mongoose.connect(
-    process.env.DB,
+    "mongodb+srv://me1:Frontech1@cluster0.o8cmx.mongodb.net/test?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => console.log("Connect")
   );
@@ -29,4 +29,4 @@ app.set("view engine", "ejs");
 app.use("/", routes);
 
 //starting the server
-app.listen(80, () => console.log("listening on http://localhost:80"));
+app.listen(8080, () => console.log("listening on http://localhost:80"));
