@@ -28,4 +28,4 @@ app.set("view engine", "ejs");
 app.use("/", routes);
 
 //starting the server
-app.listen(8080);
+app.listen(80);
