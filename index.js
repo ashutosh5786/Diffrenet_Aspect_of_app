@@ -15,7 +15,7 @@ app.use(express.json());
 
 try {
   mongoose.connect(
-    "mongodb+srv://me1:Frontech1@cluster0.o8cmx.mongodb.net/test?retryWrites=true&w=majority",
+    PROCESS.env.DB,
     { useNewUrlParser: true, useUnifiedTopology: true }
   );
 } catch (error) {
